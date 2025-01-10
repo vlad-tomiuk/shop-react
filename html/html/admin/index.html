@@ -1,0 +1,117 @@
+@@include('../block/block--0-system-head.html', {
+	"title": '',
+	"desc": '',
+	"pageClass": 'page-admin',
+	"adminPath": true
+})
+
+@@include('../block/block--navigation.html', {
+	"adminPath": true
+})
+
+
+<div class="page-content">
+	<div class="container">
+		<div class="page-content-hold d-flex">
+			@@include('./block/block--sidebar.html', {
+				'active': 'catalog'
+			})
+			
+			<div class="page-admin-holder">
+				<div class="admin-header">
+					<div class="admin-header__title-hold">
+						<h2 class="admin-header__title">
+							Товари
+							<a href="form-edit.html" class="admin-header__btn-add btn btn-xsm btn-icon btn-lighter btn-circle">
+								<svg class="icon icon-plus"><use href="#icon-plus"></use></svg>
+							</a>
+						</h2>
+						<div class="admin-header__search box-input form-control--set-icon">
+							<button class="btn btn-xsm btn-icon btn-ghost btn-submit form-control--icon">
+								<svg class="icon icon-filter"><use href="#icon-filter"></use></svg>
+							</button>
+							<input type="search" class="form-control form-control-round form-control-sm js-admin-search-onkeup" name="search" placeholder="Шукати..." maxlength="100" minlength="4">
+						</div>
+					</div>
+				
+					<div class="admin-header__filter btn-group btn-filter-group">
+						<a href="#" class="btn btn-white btn-sm btn-filter active">Всі товари</a>
+						<a href="#" class="btn btn-white btn-sm btn-filter ">Опубліковані</a>
+						<a href="#" class="btn btn-white btn-sm btn-filter ">Приховані</a>
+					</div>
+				
+				</div>
+				
+				<div class="box-card-list">
+				
+					<div class="js-box-card-list">
+				
+				
+						<div class="admin-card hover-scale-el">
+							<a href="form-edit.html" class="admin-card__img-hold scale-el">
+								<img src="../img/catalog/1.png" alt="" class="admin-card__img">
+							</a>
+							<div class="admin-card__text-hold">
+								<a href="form-edit.html" class="admin-card__title">Планшет Lenovo Tab M10 Plus 4/128 Grey</a>
+								<div class="admin-card__btn-list">
+									<a href="form-edit.html" class="admin-card__btn btn btn-action btn-sm btn-edit">
+										<svg class="icon icon-edit"><use href="#icon-edit"></use></svg>
+										Редагувати
+									</a>
+									<a href="#" class="admin-card__btn btn btn-action btn-sm btn-delete">
+										<svg class="icon icon-delete"><use href="#icon-delete"></use></svg>
+										Видалити
+									</a>
+									<span class="admin-card__btn btn btn-action btn-sm btn-publish publish-show">
+										<svg class="icon icon-eye"><use href="#icon-eye"></use></svg>
+										Опубліковано
+									</span>
+								</div>
+							</div>
+						</div>
+				
+						<div class="admin-card hover-scale-el">
+							<a href="form-edit.html" class="admin-card__img-hold scale-el">
+								<img src="./img/no-img.jpg" alt="" class="admin-card__img">
+							</a>
+							<div class="admin-card__text-hold">
+								<a href="form-edit.html" class="admin-card__title">Планшет Lenovo Tab M10 Plus 4/128 Grey</a>
+								<div class="admin-card__btn-list">
+									<a href="form-edit.html" class="admin-card__btn btn btn-action btn-sm btn-edit">
+										<svg class="icon icon-edit"><use href="#icon-edit"></use></svg>
+										Редагувати
+									</a>
+									<a href="#" class="admin-card__btn btn btn-action btn-sm btn-delete">
+										<svg class="icon icon-delete"><use href="#icon-delete"></use></svg>
+										Видалити
+									</a>
+									<span class="admin-card__btn btn btn-action btn-sm btn-publish publish-hide">
+										<svg class="icon icon-eye-off"><use href="#icon-eye-off"></use></svg>
+										Приховано
+									</span>
+								</div>
+							</div>
+						</div>
+				
+				
+				
+				
+					</div>
+				
+					<div class="js-box-search-card-list"></div>
+				
+				
+				</div>
+	
+	
+			</div>
+		</div>
+	</div>
+</div>
+
+
+@@include('./block/block--svgIcons.html')
+
+@@include('../block/block--1-system-footer.html', {
+	"adminPath": true
+})

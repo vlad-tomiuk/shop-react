@@ -1,0 +1,107 @@
+@@include('../block/block--0-system-head.html', {
+	"title": '',
+	"desc": '',
+	"pageClass": 'page-admin',
+	"adminPath": true
+})
+
+@@include('../block/block--navigation.html', {
+	"adminPath": true
+})
+
+
+<div class="page-content">
+	<div class="container">
+		<div class="page-content-hold d-flex">
+			@@include('./block/block--sidebar.html', {
+				'active': 'catalog'
+			})
+			
+			<div class="page-admin-holder">
+				<div class="admin-header">
+					<div class="admin-header__title-hold">
+						<h2 class="admin-header__title">Форма редагування</h2>
+					</div>
+				</div>
+			
+				<form class="admin-form-edit form-style js-send-form" enctype="multipart/form-data">
+			
+					<div class="box-input d-flex align-items-center">
+						<label for="input-title" class="box-input__label fw-bold"><span class="required-label">Картинка</span></label>
+						<div class="box-input-img-select">
+							<label class="select-file select-file--btn has-preview" id="set-image">
+								<input type="file" name="image" class="select-file__input-file" accept="image/*" data-preview-id="img-preview">
+								<span class="select-file__btn btn btn-lighter">
+									<svg class="icon icon-upload select-file__icon"><use href="#icon-upload"></use></svg>
+									<span class="select-file__btn-link">Вибрати фото</span>
+								</span>
+								<span class="select-file__info">Завантажте фото більше ніж 500x500 пікселів<br>.jpg or .png</span>
+								<img src="./img/no-img.jpg" class="select-file__img-preview" id="img-preview">
+							</label>
+						</div>
+					</div>
+			
+					<div class="box-input d-flex">
+						<label for="input-published" class="box-input__label fw-bold"><span class="required-label">Публікація</span></label>
+						<select name="published" class="form-control form-control-lg form-select" id="input-published" required="" style="--input-w: 240px;">
+							<option value="show" selected>Опублікувати</option>
+							<option value="hide">Приховати</option>
+						</select>
+					</div>
+			
+					<div class="box-input d-flex align-items-center">
+						<label for="input-category" class="box-input__label fw-bold"><span class="required-label">Категорія</span></label>
+						<select name="category" class="form-control form-control-lg form-select" id="input-category" required="" style="--input-w: 300px;">
+							<option value="">Вибрати категорію</option>
+							<option value="1">Категорія 1</option>
+							<option value="2">Категорія 2</option>
+							<option value="3">Категорія 3</option>
+						</select>
+					</div>
+
+					<div class="box-input d-flex">
+						<label for="input-hot-offer" class="box-input__label fw-bold">Гаряча пропозиція</label>
+						<select name="hot-offer" class="form-control form-control-lg form-select" id="input-hot-offer" required="" style="--input-w: 360px;">
+							<option value="hide" selected>Не відмічати</option>
+							<option value="show">Так, це гаряча пропозиція</option>
+						</select>
+					</div>
+			
+					<div class="box-input d-flex align-items-center">
+						<label for="input-title" class="box-input__label fw-bold"><span class="required-label">Заголовок</span></label>
+						<input type="text" value="" id="input-title" class="form-control form-control-lg" name="title" placeholder="Яка назва товару?" maxlength="100" minlength="4" required="">
+					</div>
+
+					<div class="box-input d-flex align-items-center">
+						<label for="input-price" class="box-input__label fw-bold"><span class="required-label">Ціна</span></label>
+						<input type="text" value="" id="input-price" class="form-control form-control-lg" name="price" placeholder="Введіть ціну в гривнях" required="">
+					</div>
+
+					<div class="box-input d-flex align-items-center">
+						<label for="input-price-old" class="box-input__label fw-bold">Стара ціна</span></label>
+						<input type="text" value="" id="input-price-old" class="form-control form-control-lg" name="price-old" placeholder="Введіть акційну ціну в гривнях">
+					</div>
+					
+					<div class="box-input d-flex">
+						<label for="input-desk" class="box-input__label fw-bold">Опис товару</label>
+						<textarea name="desk" id="input-desk" class="form-control form-control-lg" minlength="10" placeholder="Розглядаємо як підключити wysiwyg редактор" style="--min-h: 250px"></textarea>
+					</div>
+			
+					<div class="box-bottom d-flex label-offset">
+						<button class="btn btn-submit">Зберегти</button>
+						<a href="index.html" class="btn btn-lighter btn-cancel">Відмінити</a>
+					</div>
+				</form>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+@@include('./block/block--svgIcons.html')
+
+@@include('../block/block--1-system-footer.html', {
+	"adminPath": true
+})

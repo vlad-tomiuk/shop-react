@@ -1,0 +1,44 @@
+@@include('./block/block--0-system-head.html', {
+	"title": '',
+	"desc": '',
+	"pageClass": 'page-profile-auth',
+})
+
+@@include('./block/block--navigation.html')
+
+<div class="page-content page-content-auth">
+	<div class="container">
+
+		<h2 class="title-square title-square--icon">
+			<a href="index.html" class="title-square__icon">
+				<svg class="icon icon-log-in"><use href="#icon-log-in"></use></svg>
+			</a>
+			<span class="title-square__small"><a href="index.html" class="link-hover">Повернутися до каталогу</a></span>
+			<span class="title-square__main">
+				<span class="link-item link-item-auth active">Авторизація</span>
+				<span class="link-item link-item-reg"><a href="profile-reg.html" class="link-hover">Реєструватися</a></span>
+			</span>
+		</h2>
+
+		<form class="form-style form-auth" id="form-auth" action="admin/">
+
+			<div class="form-group">
+				<label class="form-label" for="email">Email:</label>
+				<input type="email" id="email" name="email" class="form-control" placeholder="Введіть ваш email">
+			</div>
+
+			<div class="form-group">
+				<label class="form-label" for="pass">Пароль</label>
+				<input type="password" id="pass" name="pass" class="form-control" placeholder="Введіть ваш пароль">
+			</div>
+
+			<div class="form-group form-action">
+				<button type="submit" class="btn w-fill">Авторизуватися</button>
+				<a href="profile-password-forgot.html" class="btn btn-link btn-sm btn-forgot-password">Забули пароль?</a>
+			</div>
+		</form>	
+
+	</div>
+</div>
+
+@@include('./block/block--1-system-footer.html')

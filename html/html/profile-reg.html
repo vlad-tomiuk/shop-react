@@ -1,0 +1,48 @@
+@@include('./block/block--0-system-head.html', {
+	"title": '',
+	"desc": '',
+	"pageClass": 'page-profile-reg',
+})
+
+@@include('./block/block--navigation.html')
+
+<div class="page-content page-content-auth">
+	<div class="container">
+
+		<h2 class="title-square title-square--icon">
+			<a href="index.html" class="title-square__icon">
+				<svg class="icon icon-users"><use href="#icon-users"></use></svg>
+			</a>
+			<span class="title-square__small"><a href="index.html" class="link-hover">Повернутися до каталогу</a></span>
+			<span class="title-square__main">
+				<span class="link-item link-item-auth"><a href="profile-auth.html" class="link-hover">Авторизація</a></span>
+				<span class="link-item link-item-reg active">Реєструватися</span>
+			</span>
+		</h2>
+
+		<form class="form-style form-auth" id="form-reg" action="admin/">
+			
+			<div class="form-group">
+				<label class="form-label" for="name">Як до вас звертатися?</label>
+				<input type="text" id="name" name="name" class="form-control" required placeholder="ПІБ">
+			</div>
+
+			<div class="form-group">
+				<label class="form-label" for="email">Email:</label>
+				<input type="email" id="email" name="email" class="form-control" required placeholder="Введіть ваш email">
+			</div>
+
+			<div class="form-group">
+				<label class="form-label" for="pass">Пароль</label>
+				<input type="password" id="pass" name="pass" class="form-control" required placeholder="Введіть ваш пароль">
+			</div>
+
+			<div class="form-group form-action">
+				<button type="submit" class="btn w-fill">Реєструватися</button>
+			</div>
+		</form>	
+
+	</div>
+</div>
+
+@@include('./block/block--1-system-footer.html')

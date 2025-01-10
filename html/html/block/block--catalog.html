@@ -1,0 +1,54 @@
+<div class="catalog" id="catalog">
+	<div class="container">
+
+		@@if (context.header == 'search') {
+			@@include('./block--catalog-header-search.html')
+		}
+		@@if (!context.header) {
+			@@include('./block--catalog-header-home.html')
+		}
+
+		<div class="catalog__content" id="catalog-products">
+
+			<div class="card-product">
+				<div class="card-product__img-hold">
+					<img src="img/catalog/1.png" alt="" class="card-product__img">
+				</div>
+				<div class="card-product__text-hold">
+					<a href="#" class="card-product__title-link">Планшет Lenovo Tab M10 Plus 4/128 Grey</a>
+					<span class="card-product__price">8 999 грн <small>12 999 грн</small></span>
+					<a href="#" class="card-product__btn-add">
+						<svg class="icon icon-cart"><use href="#icon-cart-add"></use></svg>
+					</a>
+				</div>
+			</div>
+			
+			<div class="card-product">
+				<div class="card-product__img-hold">
+					<img src="img/catalog/2.png" alt="" class="card-product__img">
+				</div>
+				<div class="card-product__text-hold">
+					<a href="#" class="card-product__title-link">Планшет Lenovo Tab M10 Plus 4/128 Grey</a>
+					<span class="card-product__price">8 999 грн <small>12 999 грн</small></span>
+					<a href="#" class="card-product__btn-add">
+						<svg class="icon icon-cart"><use href="#icon-cart-add"></use></svg>
+					</a>
+				</div>
+			</div>
+			<div class="card-product">
+				<div class="card-product__img-hold">
+					<img src="img/catalog/3.png" alt="" class="card-product__img">
+				</div>
+				<div class="card-product__text-hold">
+					<a href="#" class="card-product__title-link">Планшет Lenovo Tab M10 Plus 4/128 Grey</a>
+					<span class="card-product__price">8 999 грн <small>12 999 грн</small></span>
+					<a href="#" class="card-product__btn-add">
+						<svg class="icon icon-cart"><use href="#icon-cart-add"></use></svg>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>

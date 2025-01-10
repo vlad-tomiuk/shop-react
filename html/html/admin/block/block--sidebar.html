@@ -1,0 +1,45 @@
+<button class="btn btn-sm btn-icon btn-lighter btn-circle btn-mobile-sidebar hide-pc" onclick="setActive(event)" data-box-toggle=".js-admin-sidebar">
+	<svg class="icon icon-sidebar"><use href="#icon-sidebar"></use></svg>
+</button>
+
+<div class="admin-sidebar js-admin-sidebar">
+	<div class="admin-sidebar__user text-center">
+		<img src="./img/admin-preview.png" alt="" class="admin-sidebar__user-img rounded-circle">
+		<h2 class="admin-sidebar__user-name fw-bold">Admin Admin</h2>
+		<h3 class="admin-sidebar__user-email">admin@gmail.com</h3>
+	</div>
+
+	<ul class="admin-sidebar__list-links list-unstyled mb-0">
+		<li class="admin-sidebar__li">
+			<a href="index.html" class="admin-sidebar__link btn btn-lighter @@if (context.active == 'catalog') {active}">
+				<svg class="icon icon-cart-bag"><use href="#icon-cart-bag"></use></svg>
+				Товари
+			</a>
+		</li>
+		<li class="admin-sidebar__li">
+			<a href="index.html" class="admin-sidebar__link btn btn-lighter @@if (context.active == 'users') {active}">
+				<svg class="icon icon-user top--1"><use href="#icon-user"></use></svg>
+				Користувачі
+			</a>
+		</li>
+		<li class="admin-sidebar__li">
+			<a href="index.html" class="admin-sidebar__link btn btn-lighter @@if (context.active == 'category') {active}">
+				<svg class="icon icon-category"><use href="#icon-category"></use></svg>
+				Категорії
+			</a>
+		</li>
+		<li class="admin-sidebar__li">
+			<a href="index.html" class="admin-sidebar__link btn btn-lighter @@if (context.active == 'comments') {active}">
+				<svg class="icon icon-comments"><use href="#icon-comments"></use></svg>
+				Замовлення
+			</a>
+		</li>
+		<li class="admin-sidebar__li admin-sidebar__li--logout">
+			<a href="../index.html" class="admin-sidebar__link btn btn-lighter btn-logout">
+				<svg class="icon icon-log-out"><use href="#icon-log-out"></use></svg>
+				Вийти
+			</a>
+		</li>
+	</ul>
+
+</div>

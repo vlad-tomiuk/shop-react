@@ -1,0 +1,48 @@
+<div class="navigation">
+	<div class="container">
+		<div class="navigation__hold">
+			<div class="navigation__left navigation__links js-mobile-menu">
+				<ul class="menu navigation__item-list">
+					<li class="menu__li navigation__item">
+						<a href="@@if (context.adminPath) {../}index.html" class="menu__link link-hover">Головна</a>
+					</li>
+					<li class="menu__li navigation__item">
+						<a href="@@if (context.adminPath) {../}delivery.html" class="menu__link link-hover">Доставка і оплата</a>
+					</li>
+					<li class="menu__li navigation__item">
+						<a href="@@if (context.adminPath) {../}contacts.html" class="menu__link link-hover">Контакти</a>
+					</li>
+				</ul>
+			</div>
+			<div class="navigation__middle">
+				<a href="@@if (context.adminPath) {../}index.html" class="logo">I-happy</a>
+			</div>
+			<div class="navigation__right">
+				<ul class="navigation__item-list">
+					<li class="navigation__item">
+						<a href="@@if (context.adminPath) {../}search.html" class="navigation__item-link">
+							<svg class="icon icon-search"><use href="#icon-search"></use></svg>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="@@if (context.adminPath) {../}order.html" class="navigation__item-link">
+							<span class="cart-added-summ js-cart-added-summ">0</span>
+							<svg class="icon icon-cart-bag"><use href="#icon-cart-bag"></use></svg>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="@@if (context.adminPath) {../}profile-auth.html" class="navigation__item-link">
+							<svg class="icon icon-user"><use href="#icon-user"></use></svg>
+						</a>
+					</li>
+					<li class="navigation__item hide-pc">
+						<label class="hamburger">
+							<input type="checkbox" onchange="setActive(event)" data-box-toggle=".js-mobile-menu">
+							<svg viewBox="0 0 32 32"><path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path><path class="line" d="M7 16 27 16"></path></svg>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
