@@ -23,7 +23,7 @@ export default function Navigation() {
 						</ul>
 					</div>
 					<div className="navigation__middle">
-						<Link to="/" className="logo">I-happy</Link>
+						<Link to="/" className="logo">I-happy 222</Link>
 					</div>
 					<div className="navigation__right">
 						<ul className="navigation__item-list">
