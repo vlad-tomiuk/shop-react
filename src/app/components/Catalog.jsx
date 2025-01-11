@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react"
 import Product from "./Product";
-import { getCategory, getProducts, getProductsByCategory, getProductsByName } from "../hooks/Hooks";
+import { getCategory, getProducts, getProductsByName } from "../hooks/Hooks";
 import { Link, useParams } from "react-router-dom";
-import CartProvider from "./CartProvider";
 
 export default function Catalog({ page = 'catalog' }) {
     const [dropdown, setDropdown] = useState(false);
     const [categoryList, setCategoryList] = useState([]);
     const [productList, setProductList] = useState([]);
 	const [searchName, setSearchName] = useState('');
-	let timeOutInit = '';
 	const { catid } = useParams();	
 
     useEffect(() => {
@@ -20,18 +18,8 @@ export default function Catalog({ page = 'catalog' }) {
 		getProducts(setProductList, catid);
     }, [catid]);
 
-	// function handleProductByCategory(event) {
-	// 	getProductsByCategory(event, setProductList);
-	// }
-
 	function handleSearch(event) {		
 		setSearchName(event.target.value)
-		
-		// clearTimeout(timeOutInit);
-		// timeOutInit = setTimeout(function(){
-		// 	getProductsByCategory(event, setProductList);
-		// }, 1000);
-		
 	}
 
     return (
